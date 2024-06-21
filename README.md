@@ -1,5 +1,5 @@
 ***
-![](https://i.pinimg.com/564x/ee/bc/c3/eebcc3354c6e8ca3c05026a2e879923d.jpg)
+![](https://github.com/xyrad-bot/xyrad/blob/main/images/Zyrad-Bots.gif?raw=true)
 ***
 
 
