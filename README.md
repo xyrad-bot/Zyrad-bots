@@ -57,3 +57,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 - Thanks to the original developers of the Mirror-Leech-Telegram-Bot.
 - Contributions and feature integrations from various repositories.
+- All credits is for aeon project and mltb dev
