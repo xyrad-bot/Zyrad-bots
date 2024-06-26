@@ -397,7 +397,7 @@ class MirrorLeechListener:
             if mime_type == "Folder":
                 msg += f'<b>• Total files: </b>{files}\n'
             if link:
-                buttons.ubutton('Cloud link', link)
+                buttons.ubutton('♻️ Drive Link', link)
                 INDEX_URL = self.index_link if self.drive_id else config_dict['INDEX_URL']
                 if not rclonePath:
                     if INDEX_URL:
@@ -405,7 +405,7 @@ class MirrorLeechListener:
                         share_url = f'{INDEX_URL}/{url_path}'
                         if mime_type == "Folder":
                             share_url += '/'
-                        buttons.ubutton('Index link', share_url)
+                        buttons.ubutton('🔗 Direct Link', share_url)
                 buttons = extra_btns(buttons)
                 button = buttons.build_menu(2)
             elif rclonePath:
