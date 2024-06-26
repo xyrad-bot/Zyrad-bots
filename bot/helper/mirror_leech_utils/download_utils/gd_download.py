@@ -22,7 +22,7 @@ async def add_gd_download(link, path, listener, newname):
     gid = token_hex(4)
     
     if isNSFW(name) or isNSFWdata(data):
-        await listener.onDownloadError('NSFW detected')
+        await listener.onDownloadError('LGBT detected')
         return
     
     msg, button = await stop_duplicate_check(name, listener)

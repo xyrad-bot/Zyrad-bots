@@ -368,7 +368,7 @@ async def _ytdl(client, message, isLeech=False, sameDir=None, bulk=[]):
     error_msg = []
     error_button = None
     if await nsfw_precheck(message):
-     	  error_msg.extend(['NSFW detected'])
+     	  error_msg.extend(['LGBT detected'])
     task_utilis_msg, error_button = await task_utils(message)
     if task_utilis_msg:
         error_msg.extend(task_utilis_msg)
