@@ -19,7 +19,7 @@ async def list_buttons(user_id, isRecursive=True):
     return buttons.build_menu(2)
 
 async def _list_drive(key, message, item_type, isRecursive):
-    LOGGER.info(f"listing: {key}")
+    LOGGER.info(f"Mulai Ngelist: {key}")
     gdrive = GoogleDriveHelper()
     telegraph_content, contents_no = await sync_to_async(gdrive.drive_list, key, isRecursive=isRecursive, itemType=item_type)
     if telegraph_content:
@@ -28,10 +28,10 @@ async def _list_drive(key, message, item_type, isRecursive):
         except Exception as e:
             await editMessage(message, e)
             return
-        msg = f'<b>Found {contents_no} result for </b>{key}'
+        msg = f'<b>Ketemu {contents_no} hasil buat </b>{key}'
         await editMessage(message, msg, button)
     else:
-        await editMessage(message, f'<b>No result found for </b>{key}')
+        await editMessage(message, f'<b>Gada hasil buat </b>{key}')
 
 @new_task
 async def select_type(_, query):

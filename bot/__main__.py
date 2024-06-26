@@ -139,7 +139,7 @@ async def start(client, message):
         return await sendMessage(message, msg)
     elif await CustomFilters.authorized(client, message):
         help_command = f"/{BotCommands.HelpCommand}"
-        start_string = f'This bot can mirror all your links|files|torrents to Google Drive or any rclone cloud or to telegram.\n<b>Type {help_command} to get a list of available commands</b>'
+        start_string = f'Kita mulai sekarang?.\n<b>Ketik {help_command} untuk membuka menu bantuan</b>'
         await sendMessage(message, start_string, photo='Random')
     else:
         await sendMessage(message, 'Nice! Now i will send all your files here.\n<b>Use me at @xyradelw</b>', photo='Random')
@@ -147,7 +147,7 @@ async def start(client, message):
 
 
 async def restart(client, message):
-    restart_message = await sendMessage(message, 'Restarting...')
+    restart_message = await sendMessage(message, 'Mulai ulang...')
     if scheduler.running:
         scheduler.shutdown(wait=False)
     for interval in [QbInterval, Interval]:
@@ -244,7 +244,7 @@ async def restart_notification():
         with open(".restartmsg") as f:
             chat_id, msg_id = map(int, f)
         try:
-            await bot.edit_message_text(chat_id=chat_id, message_id=msg_id, text='Restarted Successfully!')
+            await bot.edit_message_text(chat_id=chat_id, message_id=msg_id, text='Mulai ulang berhasil!')
         except:
             pass
         await aioremove(".restartmsg")
